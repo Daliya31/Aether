@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aether Cloud — Next-Gen Edge Hosting & Infrastructure</title>
+  <meta name="description" content="Deploy, scale, and optimize your applications globally with Aether's next-generation cloud infrastructure. Sub-10ms response times, military-grade security.">
+  
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Preloader Screen -->
+  <div id="preloader">
+    <div class="loader-content">
+      <div class="loader-logo">
+        <i class="fa-solid fa-cube"></i>
+        <span>Aether</span>
+      </div>
+      <div class="loader-bar-bg">
+        <div class="loader-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Background Lighting/Parallax Blobs -->
+  <div class="space-bg">
+    <div class="ambient-light light-1"></div>
+    <div class="ambient-light light-2"></div>
+    <div class="ambient-light light-3"></div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="#home" class="logo">
+        <i class="fa-solid fa-cube"></i>
+        <span>Aether</span>
+      </a>
+      
+      <button class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#roadmap" class="nav-link">Roadmap</a></li>
+        <li><a href="#network" class="nav-link">Network</a></li>
+        <li><a href="#pricing" class="nav-link">Pricing</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn btn-secondary btn-nav" onclick="location.href='#contact'">Launch App</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <i class="fa-solid fa-sparkles"></i>
+        Introducing Aether Cloud 2.0
+      </div>
+      <h1 class="hero-title reveal" style="transition-delay: 0.1s;">
+        Deploy at the speed of <span>imagination.</span>
+      </h1>
+      <p class="hero-tagline reveal" style="transition-delay: 0.2s;">
+        Aether Cloud provides a high-performance, edge-first hosting environment for developers who demand lightning-fast response times and zero-friction scaling.
+      </p>
+      <div class="hero-ctas reveal" style="transition-delay: 0.3s;">
+        <a href="#contact" class="btn btn-primary">
+          Get Started
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="#features" class="btn btn-secondary">Learn More</a>
+      </div>
+
+      <!-- Glass CLI Mockup Panel -->
+      <div class="hero-illustration glass-card reveal" style="transition-delay: 0.4s;">
+        <div class="mockup-header">
+          <div class="mockup-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <span class="mockup-tab">aether-cli</span>
+        </div>
+        <div class="mockup-body">
+          <code><span class="comment">// Install Aether CLI globally</span></code>
+          <code>$ npm install -g @aether/cli</code>
+          <code>&nbsp;</code>
+          <code><span class="comment">// Initialize & deploy instantly</span></code>
+          <code>$ aether deploy --prod</code>
+          <code>&nbsp;</code>
+          <code><span class="comment">/* Output: */</span></code>
+          <code><span class="keyword">Deploying</span> app-main to <span class="string">global-edge</span>...</code>
+          <code><span class="keyword">Analyzing</span> bundles [Done]</code>
+          <code><span class="keyword">Routing</span> active across <span class="string">124 edge nodes</span></code>
+          <code><span class="keyword">Success!</span> Live at: <span class="string">https://aether-app-908.edge.dev</span></code>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="features" id="features">
+    <div class="section-header reveal">
+      <span class="section-badge">Why Choose Us</span>
+      <h2 class="section-title">Engineered for <span>Next-Gen</span> Systems</h2>
+      <p class="section-desc">
+        Everything you need to ship fast, reliable, and secure web applications to global audiences without managing complex servers.
+      </p>
+    </div>
+
+    <div class="features-grid">
+      <!-- Card 1 -->
+      <div class="feature-card glass-card reveal">
+        <div class="feature-icon-wrapper">
+          <i class="fa-solid fa-bolt"></i>
+        </div>
+        <h3 class="feature-title">Global Edge Network</h3>
+        <p class="feature-desc">
+          Deploy your code closer to your users. Our edge network spans over 120 global PoPs, reducing latency to under 10ms worldwide.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="feature-card glass-card reveal" style="transition-delay: 0.1s;">
+        <div class="feature-icon-wrapper">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <h3 class="feature-title">Military-Grade Security</h3>
+        <p class="feature-desc">
+          Inherent DDoS protection, automatic wildcard SSL certificates, and isolated client micro-environments secure your tech stack by default.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="feature-card glass-card reveal" style="transition-delay: 0.2s;">
+        <div class="feature-icon-wrapper">
+          <i class="fa-solid fa-chart-line"></i>
+        </div>
+        <h3 class="feature-title">Real-Time Telemetry</h3>
+        <p class="feature-desc">
+          Track user requests, cold start times, and serverless compute consumption via built-in high-fidelity performance metrics.
+        </p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="feature-card glass-card reveal">
+        <div class="feature-icon-wrapper">
+          <i class="fa-solid fa-infinity"></i>
+        </div>
+        <h3 class="feature-title">CI/CD Integration</h3>
+        <p class="feature-desc">
+          Connect your GitHub repository and watch your site build and deploy upon every git commit. Preview deployments made painless.
+        </p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="feature-card glass-card reveal" style="transition-delay: 0.1s;">
+        <div class="feature-icon-wrapper">
+          <i class="fa-solid fa-database"></i>
+        </div>
+        <h3 class="feature-title">Edge Database Access</h3>
+        <p class="feature-desc">
+          Query globally distributed serverless databases with minimum overhead. Data caching built straight into our edge runtimes.
+        </p>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="feature-card glass-card reveal" style="transition-delay: 0.2s;">
+        <div class="feature-icon-wrapper">
+          <i class="fa-solid fa-route"></i>
+        </div>
+        <h3 class="feature-title">Smart Routing Rules</h3>
+        <p class="feature-desc">
+          Redirect and rewrite traffic using high-performance edge config files. Bypasses application overhead for redirect loops.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics Section -->
+  <section class="stats" id="stats">
+    <div class="stats-grid">
+      <!-- Stat 1 -->
+      <div class="stat-card glass-card reveal">
+        <div class="stat-num"><span class="counter-val" data-target="99.999" data-decimals="3">0.000</span>%</div>
+        <div class="stat-label">Uptime SLA</div>
+      </div>
+      <!-- Stat 2 -->
+      <div class="stat-card glass-card reveal" style="transition-delay: 0.1s;">
+        <div class="stat-num">&lt;<span class="counter-val" data-target="15">0</span>ms</div>
+        <div class="stat-label">Global Latency</div>
+      </div>
+      <!-- Stat 3 -->
+      <div class="stat-card glass-card reveal" style="transition-delay: 0.2s;">
+        <div class="stat-num"><span class="counter-val" data-target="0">50</span>ms</div>
+        <div class="stat-label">Cold Starts</div>
+      </div>
+      <!-- Stat 4 -->
+      <div class="stat-card glass-card reveal" style="transition-delay: 0.3s;">
+        <div class="stat-num"><span class="counter-val" data-target="250">0</span>+</div>
+        <div class="stat-label">Edge Node PoPs</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline / Roadmap Section -->
+  <section class="roadmap" id="roadmap">
+    <div class="section-header reveal">
+      <span class="section-badge">Roadmap</span>
+      <h2 class="section-title">Milestones & <span>Future Vision</span></h2>
+      <p class="section-desc">
+        A timeline of our achievements and upcoming core platform rollouts.
+      </p>
+    </div>
+
+    <div class="roadmap-container">
+      <div class="roadmap-timeline-line"></div>
+
+      <!-- Item 1 -->
+      <div class="roadmap-item reveal">
+        <div class="roadmap-dot-checkpoint"></div>
+        <div class="roadmap-side roadmap-side-left">
+          <div class="roadmap-panel glass-card">
+            <span class="roadmap-phase">Q1 2026</span>
+            <h3 class="roadmap-milestone-title">Aether V2 Launch</h3>
+            <p class="feature-desc">
+              Introduction of liquid-glass edge computing nodes. Redesigned CLI deployment bundle size checks.
+            </p>
+          </div>
+        </div>
+        <div class="roadmap-side roadmap-side-right"></div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="roadmap-item reveal">
+        <div class="roadmap-dot-checkpoint"></div>
+        <div class="roadmap-side roadmap-side-left"></div>
+        <div class="roadmap-side roadmap-side-right">
+          <div class="roadmap-panel glass-card">
+            <span class="roadmap-phase">Q2 2026</span>
+            <h3 class="roadmap-milestone-title">Global Database Sync</h3>
+            <p class="feature-desc">
+              Automatic edge caching layers syncing real-time SQL/NoSQL queries in less than 50 milliseconds globally.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="roadmap-item reveal">
+        <div class="roadmap-dot-checkpoint"></div>
+        <div class="roadmap-side roadmap-side-left">
+          <div class="roadmap-panel glass-card">
+            <span class="roadmap-phase">Q3 2026</span>
+            <h3 class="roadmap-milestone-title">Aether AI-Copilot</h3>
+            <p class="feature-desc">
+              AI-driven smart routing optimizations mapping client servers automatically based on live network fluctuations.
+            </p>
+          </div>
+        </div>
+        <div class="roadmap-side roadmap-side-right"></div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="roadmap-item reveal">
+        <div class="roadmap-dot-checkpoint"></div>
+        <div class="roadmap-side roadmap-side-left"></div>
+        <div class="roadmap-side roadmap-side-right">
+          <div class="roadmap-panel glass-card">
+            <span class="roadmap-phase">Q4 2026</span>
+            <h3 class="roadmap-milestone-title">Custom SLAs & Hardware</h3>
+            <p class="feature-desc">
+              Private physical edge racks and dedicated infrastructure support for core global enterprise platforms.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community / Network Map Section -->
+  <section class="network" id="network">
+    <div class="section-header reveal">
+      <span class="section-badge">Global Community</span>
+      <h2 class="section-title">Serving a <span>Connected World</span></h2>
+      <p class="section-desc">
+        Aether maps users to the closest node globally. Our network coverage ensures reliable response speeds in every country.
+      </p>
+    </div>
+
+    <div class="network-wrapper reveal">
+      <!-- High-tech SVG Map visualization -->
+      <div class="network-map-container glass-card">
+        <svg viewBox="0 0 1000 500" class="map-svg">
+          <!-- Stylized grid network connecting dots -->
+          <line x1="150" y1="180" x2="350" y2="150" class="map-link-line" />
+          <line x1="350" y1="150" x2="520" y2="280" class="map-link-line" />
+          <line x1="520" y1="280" x2="720" y2="180" class="map-link-line" />
+          <line x1="720" y1="180" x2="880" y2="350" class="map-link-line" />
+          <line x1="150" y1="180" x2="250" y2="380" class="map-link-line" />
+          <line x1="250" y1="380" x2="520" y2="280" class="map-link-line" />
+          <line x1="520" y1="280" x2="650" y2="380" class="map-link-line" />
+          <line x1="720" y1="180" x2="650" y2="380" class="map-link-line" />
+          
+          <!-- Nodes -->
+          <circle cx="150" cy="180" r="7" class="map-dot" />
+          <circle cx="350" cy="150" r="7" class="map-dot" />
+          <circle cx="520" cy="280" r="7" class="map-dot" />
+          <circle cx="720" cy="180" r="7" class="map-dot" />
+          <circle cx="880" cy="350" r="7" class="map-dot" />
+          <circle cx="250" cy="380" r="7" class="map-dot" />
+          <circle cx="650" cy="380" r="7" class="map-dot" />
+          
+          <!-- Text Labels -->
+          <text x="130" y="160" fill="#94a3b8" font-size="12" font-weight="700">SF Edge Node</text>
+          <text x="330" y="130" fill="#94a3b8" font-size="12" font-weight="700">NY Edge Node</text>
+          <text x="500" y="260" fill="#94a3b8" font-size="12" font-weight="700">London Node</text>
+          <text x="700" y="160" fill="#94a3b8" font-size="12" font-weight="700">Tokyo Node</text>
+          <text x="860" y="330" fill="#94a3b8" font-size="12" font-weight="700">Sydney Node</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery / Highlights Section -->
+  <section class="gallery" id="gallery">
+    <div class="section-header reveal">
+      <span class="section-badge">Gallery Showcase</span>
+      <h2 class="section-title">Take a Look Inside the <span>Dashboard</span></h2>
+      <p class="section-desc">
+        Explore screenshots detailing deployment configurations and diagnostic monitoring.
+      </p>
+    </div>
+
+    <div class="gallery-grid">
+      <!-- Item 1 -->
+      <div class="gallery-item glass-card reveal">
+        <div class="gallery-image-box">
+          <div class="gallery-item-graphic"><i class="fa-solid fa-chart-pie"></i></div>
+          <div class="gallery-item-overlay">
+            <h3 class="gallery-item-title">Analytics Console</h3>
+            <p class="gallery-item-desc">High-precision traffic monitoring tools.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Item 2 -->
+      <div class="gallery-item glass-card reveal" style="transition-delay: 0.1s;">
+        <div class="gallery-image-box">
+          <div class="gallery-item-graphic"><i class="fa-solid fa-terminal"></i></div>
+          <div class="gallery-item-overlay">
+            <h3 class="gallery-item-title">Interactive Terminal</h3>
+            <p class="gallery-item-desc">Aether CLI deployment config files.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="gallery-item glass-card reveal" style="transition-delay: 0.2s;">
+        <div class="gallery-image-box">
+          <div class="gallery-item-graphic"><i class="fa-solid fa-network-wired"></i></div>
+          <div class="gallery-item-overlay">
+            <h3 class="gallery-item-title">Routing Dashboard</h3>
+            <p class="gallery-item-desc">Manage edge redirections in real-time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <div class="section-header reveal">
+      <span class="section-badge">Testimonials</span>
+      <h2 class="section-title">Trusted by <span>Innovators</span> Globally</h2>
+      <p class="section-desc">
+        See what engineers, builders, and designers say about our hosting environments.
+      </p>
+    </div>
+
+    <!-- Infinite Auto Scrolling Ribbon -->
+    <div class="carousel-track-container reveal">
+      <div class="carousel-track">
+        <!-- Card 1 -->
+        <div class="testimonial-card glass-card">
+          <div class="rating-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">
+            "Aether Cloud completely changed how our company deploys builds. Scaling from 100 to 100k users took zero infrastructure updates."
+          </p>
+          <div class="testimonial-user">
+            <div class="user-avatar-placeholder">SM</div>
+            <div class="user-info">
+              <h4>Sarah Miller</h4>
+              <p>Lead Engineer at PixelDev</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="testimonial-card glass-card">
+          <div class="rating-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">
+            "Latency dropped from 120ms to under 12ms globally. Our clients have commented on how snappy the application loading has become!"
+          </p>
+          <div class="testimonial-user">
+            <div class="user-avatar-placeholder">TK</div>
+            <div class="user-info">
+              <h4>Thomas K.</h4>
+              <p>Founder at ScaleUp Tech</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="testimonial-card glass-card">
+          <div class="rating-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">
+            "The git integration is flawless. I merge to main and the updates propagate to 120 nodes in under a second. Highly recommend."
+          </p>
+          <div class="testimonial-user">
+            <div class="user-avatar-placeholder">AL</div>
+            <div class="user-info">
+              <h4>Alex Lin</h4>
+              <p>CTO at ByteFlow Studio</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="testimonial-card glass-card">
+          <div class="rating-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">
+            "With pre-warmed edge sandboxes, cold starts are now non-existent. Aether outperformed all AWS Lambda platforms we tested."
+          </p>
+          <div class="testimonial-user">
+            <div class="user-avatar-placeholder">EM</div>
+            <div class="user-info">
+              <h4>Emma Watson</h4>
+              <p>DevOps Director at FinCorp</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Duplicate cards for infinite wrap visual scrolling -->
+        <!-- Card 1 Duplicate -->
+        <div class="testimonial-card glass-card">
+          <div class="rating-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">
+            "Aether Cloud completely changed how our company deploys builds. Scaling from 100 to 100k users took zero infrastructure updates."
+          </p>
+          <div class="testimonial-user">
+            <div class="user-avatar-placeholder">SM</div>
+            <div class="user-info">
+              <h4>Sarah Miller</h4>
+              <p>Lead Engineer at PixelDev</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 Duplicate -->
+        <div class="testimonial-card glass-card">
+          <div class="rating-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">
+            "Latency dropped from 120ms to under 12ms globally. Our clients have commented on how snappy the application loading has become!"
+          </p>
+          <div class="testimonial-user">
+            <div class="user-avatar-placeholder">TK</div>
+            <div class="user-info">
+              <h4>Thomas K.</h4>
+              <p>Founder at ScaleUp Tech</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="pricing" id="pricing">
+    <div class="section-header reveal">
+      <span class="section-badge">Pricing</span>
+      <h2 class="section-title">Flexible Plans for <span>Growing Teams</span></h2>
+      <p class="section-desc">
+        Pick the scale that matches your application bandwidth. Grow at your own pace.
+      </p>
+    </div>
+
+    <div class="pricing-grid">
+      <!-- Plan 1 -->
+      <div class="pricing-card glass-card reveal">
+        <div class="price-header">
+          <h3 class="plan-name">Developer</h3>
+          <div class="plan-price">$0<span>/free</span></div>
+        </div>
+        <ul class="price-features">
+          <li><i class="fa-solid fa-check"></i> 100 GB Bandwidth</li>
+          <li><i class="fa-solid fa-check"></i> Unlimited Deployments</li>
+          <li><i class="fa-solid fa-check"></i> Global Edge Network</li>
+          <li><i class="fa-solid fa-check"></i> Community Support</li>
+        </ul>
+        <a href="#contact" class="btn btn-secondary btn-pricing">Get Started</a>
+      </div>
+
+      <!-- Plan 2 (Popular) -->
+      <div class="pricing-card glass-card popular reveal" style="transition-delay: 0.1s;">
+        <div class="popular-badge">Popular</div>
+        <div class="price-header">
+          <h3 class="plan-name">Pro Team</h3>
+          <div class="plan-price">$29<span>/month</span></div>
+        </div>
+        <ul class="price-features">
+          <li><i class="fa-solid fa-check"></i> 1 TB Bandwidth</li>
+          <li><i class="fa-solid fa-check"></i> Custom Domains + SSL</li>
+          <li><i class="fa-solid fa-check"></i> Advanced Analytics</li>
+          <li><i class="fa-solid fa-check"></i> Priority Email Support</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary btn-pricing">Upgrade Now</a>
+      </div>
+
+      <!-- Plan 3 -->
+      <div class="pricing-card glass-card reveal" style="transition-delay: 0.2s;">
+        <div class="price-header">
+          <h3 class="plan-name">Enterprise</h3>
+          <div class="plan-price">Custom</div>
+        </div>
+        <ul class="price-features">
+          <li><i class="fa-solid fa-check"></i> Unlimited Bandwidth</li>
+          <li><i class="fa-solid fa-check"></i> Dedicated Edge Servers</li>
+          <li><i class="fa-solid fa-check"></i> Custom SLAs (99.99%)</li>
+          <li><i class="fa-solid fa-check"></i> 24/7 Dedicated Support</li>
+        </ul>
+        <a href="#contact" class="btn btn-secondary btn-pricing">Contact Sales</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq" id="faq">
+    <div class="section-header reveal">
+      <span class="section-badge">FAQ</span>
+      <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+      <p class="section-desc">
+        Explore platform mechanics, billing policies, and security layers.
+      </p>
+    </div>
+
+    <!-- Category Tabs -->
+    <div class="faq-categories reveal">
+      <button class="faq-tab-btn active" data-category="general">General</button>
+      <button class="faq-tab-btn" data-category="platform">Platform</button>
+      <button class="faq-tab-btn" data-category="security">Security</button>
+    </div>
+
+    <!-- General Category Accordion -->
+    <div class="faq-accordion-group reveal" id="faq-general">
+      <details class="faq-item glass-card" open>
+        <summary>
+          <span>What is Aether Cloud edge hosting?</span>
+          <div class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></div>
+        </summary>
+        <div class="faq-answer">
+          Aether Cloud compiles and executes serverless scripts directly at the CDN network nodes closest to the user. This cuts down round-trip delays, ensuring pages load in sub-10ms response times globally.
+        </div>
+      </details>
+
+      <details class="faq-item glass-card">
+        <summary>
+          <span>Can I link my own custom domains?</span>
+          <div class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></div>
+        </summary>
+        <div class="faq-answer">
+          Yes. You can link custom domains with standard DNS CNAME mappings. Aether automatically handles SSL certification updates and renewals.
+        </div>
+      </details>
+    </div>
+
+    <!-- Platform Category Accordion -->
+    <div class="faq-accordion-group hidden" id="faq-platform">
+      <details class="faq-item glass-card">
+        <summary>
+          <span>What build tools do you support?</span>
+          <div class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></div>
+        </summary>
+        <div class="faq-answer">
+          We support all modern frontend engines (Next.js, SvelteKit, Vite, Nuxt, Astro). Aether CLI automatically parses package files and deploys builds.
+        </div>
+      </details>
+
+      <details class="faq-item glass-card">
+        <summary>
+          <span>Is there a cold start limit?</span>
+          <div class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></div>
+        </summary>
+        <div class="faq-answer">
+          No. We operate pre-warmed container sandboxes at every edge cluster, meaning serverless processes resume in less than 50ms, bypassing AWS/Google Cloud latency.
+        </div>
+      </details>
+    </div>
+
+    <!-- Security Category Accordion -->
+    <div class="faq-accordion-group hidden" id="faq-security">
+      <details class="faq-item glass-card">
+        <summary>
+          <span>How do you handle DDoS protection?</span>
+          <div class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></div>
+        </summary>
+        <div class="faq-answer">
+          Every node has built-in layered DDoS scrubbers that identify and reject spam requests before they reach your hosting pipelines.
+        </div>
+      </details>
+
+      <details class="faq-item glass-card">
+        <summary>
+          <span>Where are environment variables stored?</span>
+          <div class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></div>
+        </summary>
+        <div class="faq-answer">
+          Environment secrets are encrypted at rest using AES-256 standards and distributed to execution micro-environments dynamically.
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Call-To-Action (CTA) Section -->
+  <section class="cta">
+    <div class="cta-panel glass-card reveal">
+      <div class="cta-content">
+        <h2 class="section-title">Ready to Experience the <span>Future?</span></h2>
+        <p class="section-desc" style="margin-bottom: 3rem;">
+          Connect your repository and start deploying high-performance applications to global networks today.
+        </p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-primary">Start Deploying Free</a>
+          <a href="#features" class="btn btn-secondary">Documentation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="contact" id="contact">
+    <div class="contact-layout glass-card reveal">
+      <div class="contact-info">
+        <div>
+          <h2 class="section-title contact-heading">Let's build <span>something epic.</span></h2>
+          <p class="section-desc">
+            Have questions about custom setups, dedicated node locations, or corporate SLAs? Send us a line.
+          </p>
+        </div>
+        
+        <ul class="contact-list">
+          <li class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+            <span>support@aether.cloud</span>
+          </li>
+          <li class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+            <span>+1 (800) 555-AETH</span>
+          </li>
+          <li class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <span>San Francisco, CA</span>
+          </li>
+        </ul>
+      </div>
+
+      <form class="contact-form" action="#" onsubmit="event.preventDefault(); alert('Message sent successfully! Our team will contact you shortly.');">
+        <div class="form-group">
+          <label class="form-label" for="form-name">Name</label>
+          <input class="form-input" type="text" id="form-name" placeholder="John Doe" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="form-email">Email Address</label>
+          <input class="form-input" type="email" id="form-email" placeholder="john@example.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="form-message">Message</label>
+          <textarea class="form-input" id="form-message" placeholder="How can we help you?" required></textarea>
+        </div>
+        <button class="btn btn-primary btn-form" type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#home" class="logo footer-logo">
+          <i class="fa-solid fa-cube"></i>
+          <span>Aether</span>
+        </a>
+        <p class="footer-tagline">
+          Next-generation edge hosting environment designed for performance-driven developers.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Resources</h4>
+        <ul class="footer-links">
+          <li><a href="#" class="footer-link">Documentation</a></li>
+          <li><a href="#" class="footer-link">Changelog</a></li>
+          <li><a href="#" class="footer-link">Pricing Plans</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Company</h4>
+        <ul class="footer-links">
+          <li><a href="#features" class="footer-link">About Us</a></li>
+          <li><a href="#" class="footer-link">Privacy Policy</a></li>
+          <li><a href="#" class="footer-link">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="copyright">&copy; 2026 Aether Cloud Inc. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" class="social-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#" class="social-link" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script Modules -->
+  <script>
+    // Preloader fader
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('preloader');
+      setTimeout(() => {
+        loader.style.opacity = '0';
+        setTimeout(() => loader.style.visibility = 'hidden', 600);
+      }, 500); // 500ms delay for premium feel
+    });
+
+    // Mobile Navbar Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (mobileMenuBtn && navMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        mobileMenuBtn.classList.toggle('open');
+        const spans = mobileMenuBtn.querySelectorAll('span');
+        if (navMenu.classList.contains('active')) {
+          spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+          spans[1].style.opacity = '0';
+          spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+        } else {
+          spans[0].style.transform = 'none';
+          spans[1].style.opacity = '1';
+          spans[2].style.transform = 'none';
+        }
+      });
+
+      // Close menu on nav-link clicks
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('active');
+          const spans = mobileMenuBtn.querySelectorAll('span');
+          spans[0].style.transform = 'none';
+          spans[1].style.opacity = '1';
+          spans[2].style.transform = 'none';
+        });
+      });
+    }
+
+    // Scroll Observer: Active Section Highlights & Sticky Navbar
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const header = document.querySelector('.header');
+
+    window.addEventListener('scroll', () => {
+      let current = 'home';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (window.scrollY >= sectionTop - 250) {
+          current = section.getAttribute('id');
+        }
+      });
+      
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+
+      if (window.scrollY > 40) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // 3D Card Tilt & Cursor Glow Coordinates
+    const cards = document.querySelectorAll('.glass-card');
+    cards.forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        card.style.setProperty('--mouse-x', `${x}px`);
+        card.style.setProperty('--mouse-y', `${y}px`);
+        
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = ((centerY - y) / centerY) * 8; // Max 8 degrees tilt
+        const rotateY = ((x - centerX) / centerX) * 8;
+        
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
+      });
+      
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+      });
+    });
+
+    // Intersection Observer for Reveal Elements
+    const reveals = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.15 });
+    reveals.forEach(reveal => revealObserver.observe(reveal));
+
+    // Numeric counter animation on scroll
+    const countUpStats = document.querySelectorAll('.counter-val');
+    const countObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+          entry.target.classList.add('counted');
+          const targetVal = parseFloat(entry.target.getAttribute('data-target'));
+          const decimals = parseInt(entry.target.getAttribute('data-decimals') || '0');
+          const duration = 2000;
+          let startTime = null;
+
+          const run = (timestamp) => {
+            if (!startTime) startTime = timestamp;
+            const progress = Math.min((timestamp - startTime) / duration, 1);
+            const current = progress * targetVal;
+            
+            entry.target.textContent = current.toFixed(decimals);
+            
+            if (progress < 1) {
+              window.requestAnimationFrame(run);
+            } else {
+              entry.target.textContent = targetVal.toFixed(decimals);
+            }
+          };
+          window.requestAnimationFrame(run);
+        }
+      });
+    }, { threshold: 0.5 });
+    countUpStats.forEach(stat => countObserver.observe(stat));
+
+    // FAQ Accordion tab switcher
+    const faqTabs = document.querySelectorAll('.faq-tab-btn');
+    const faqGroups = document.querySelectorAll('.faq-accordion-group');
+
+    faqTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        faqTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        
+        const cat = tab.getAttribute('data-category');
+        faqGroups.forEach(group => {
+          if (group.id === `faq-${cat}`) {
+            group.classList.remove('hidden');
+          } else {
+            group.classList.add('hidden');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
